@@ -1,11 +1,14 @@
 import React, {Component} from 'react';
+import marked from 'marked';
+
+
 
 class About extends Component {
     render() {
+        const markdownText = '# about';
+        const output = marked(markdownText);
         return (
-            <div className="Index">
-                <h1>about</h1>
-            </div>
+            <div dangerouslySetInnerHTML={{ __html: output }} />
         );
     }
 }
