@@ -7,6 +7,7 @@ import Home from "./pages/home/index"
 import About from "./pages/about/index"
 import Posts from "./pages/posts/index"
 import Tags from "./pages/tags/index"
+import Admin from "./pages/admin/index"
 
 class Footer extends Component {
     render() {
@@ -59,7 +60,8 @@ class App extends Component {
                             <Route exact path="/" component={Home}/>
                             <Route path="/about" component={About}/>
                             <Route path="/posts" component={Posts}/>
-                            <Route path="/Tags" component={Tags}/>
+                            <Route path="/tags" component={Tags}/>
+                            <Route path="/admin" component={Admin}/>
                         </div>
                     </Router>
                     <Footer/>
