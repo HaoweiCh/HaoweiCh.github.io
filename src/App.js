@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Home from "./pages/home/index"
 import About from "./pages/about/index"
+import Posts from "./pages/posts/index"
+import Tags from "./pages/tags/index"
 
 class Footer extends Component {
     render() {
@@ -56,7 +58,8 @@ class App extends Component {
                         <div>
                             <Route exact path="/" component={Home}/>
                             <Route path="/about" component={About}/>
-                            {/*<Route path="/topics" component={Topics}/>*/}
+                            <Route path="/posts" component={Posts}/>
+                            <Route path="/Tags" component={Tags}/>
                         </div>
                     </Router>
                     <Footer/>
