@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import {BrowserRouter as Router, Route} from "react-router-dom";
 
 import Home from "./pages/home/index"
 import About from "./pages/about/index"
@@ -48,24 +48,26 @@ class App extends Component {
         const site_name = "好为";
         const site_description = "Try harder than yesterday, Maybe I would get lucky today ：）";
         return (
-            <div className="App home">
+            <div className="home">
                 <header className="masthead">
                     <h1><a href="/">{site_name}</a></h1>
                     <p className="tagline">{site_description}</p>
                     <Menu/>
                 </header>
-                <article className="main">
-                    <Router>
-                        <div>
-                            <Route exact path="/" component={Home}/>
-                            <Route path="/about" component={About}/>
-                            <Route path="/posts" component={Posts}/>
-                            <Route path="/tags" component={Tags}/>
-                            <Route path="/admin" component={Admin}/>
-                        </div>
-                    </Router>
-                    <Footer/>
-                </article>
+
+                <Router>
+                    <div className="content">
+                        <Route exact path="/" component={Home}/>
+                        <Route path="/about" component={About}/>
+                        <Route path="/posts" component={Posts}/>
+                        <Route path="/tags" component={Tags}/>
+                        <Route path="/admin" component={Admin}/>
+
+                        <Footer/>
+                    </div>
+                </Router>
+
+
 
             </div>
         );
