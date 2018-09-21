@@ -2,13 +2,12 @@ import React, {Component} from 'react';
 
 import Post from './components/post'
 import axios from "axios";
-import marked from "marked";
 
 
 class Posts extends Component {
     constructor() {
         super();
-        this.state = {posts: [<div><h1>加载中...</h1></div>]}
+        this.state = {posts: [<div key="default"><h1>加载中...</h1></div>]}
     }
 
     componentDidMount(){
@@ -16,7 +15,7 @@ class Posts extends Component {
             .then(res => {
                 const  posts_element = [];
                 for (let post of res.data) {
-                    posts_element.push(<Post post={post}/>);
+                    posts_element.push(<Post key={post.title + post.date_create} post={post}/>);
                 }
                 this.setState({
                     posts: posts_element

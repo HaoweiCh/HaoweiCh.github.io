@@ -14,7 +14,7 @@ class Home extends Component {
                 <p className="intro">
                     To get started, edit <code>src/App.js</code>  and save to reload.
                 </p>
-                <p className="intro">
+                <div className="intro">
                     <p>process.env.NODE_ENV: {process.env.NODE_ENV}</p>
                     <p>Browser Name: {navigator.appName}</p>
                     <p>Browser Version: {navigator.appVersion}</p>
@@ -29,7 +29,7 @@ class Home extends Component {
                     <p>window.orientation: {window.orientation}</p>
                     <p>window.innerWidth: {window.innerWidth}</p>
                     <p>window.innerHeight: {window.innerHeight}</p>
-                </p>
+                </div>
             </div>
         );
     }
