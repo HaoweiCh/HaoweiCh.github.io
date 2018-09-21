@@ -1,15 +1,33 @@
 import React, {Component} from 'react';
-import marked from 'marked';
 
+import Post from './components/post'
+import axios from "axios";
+import marked from "marked";
 
 
 class Posts extends Component {
+    constructor() {
+        super();
+        this.state = {posts: [<div><h1>加载中...</h1></div>]}
+    }
+
+    componentDidMount(){
+        axios.get(window.localStorage.getItem('urlPrefix') + 'posts.json')
+            .then(res => {
+                const  posts_element = [];
+                for (let post of res.data) {
+                    posts_element.push(<Post post={post}/>);
+                }
+                this.setState({
+                    posts: posts_element
+                })
+            })
+
+    }
+
     render() {
-        const tags_url = "https://gist.githubusercontent.com/Chaaang/353a98aaa316fdec6785c38feb256b53/raw/d8f0ac94faacfda3882d567f15c0d5cb02a24af9/about"
-        const markdownText = '# Posts';
-        const output = marked(markdownText);
         return (
-            <div dangerouslySetInnerHTML={{ __html: output }} />
+            <div className="posts">{this.state.posts}</div>
         );
     }
 }

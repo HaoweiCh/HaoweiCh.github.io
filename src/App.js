@@ -8,6 +8,7 @@ import About from "./pages/about/index"
 import Posts from "./pages/posts/index"
 import Tags from "./pages/tags/index"
 import Admin from "./pages/admin/index"
+import Todos from "./pages/todos/index"
 
 class Footer extends Component {
     render() {
@@ -26,7 +27,7 @@ class Footer extends Component {
 class Menu extends Component {
     render() {
         return (
-            <nav className="Menu">
+            <nav className="menu">
                 <input id="menu-check" type="checkbox"/>
                 <label id="menu-label" htmlFor="menu-check" className="unselectable">
                     <span className="icon close-icon">✕</span>
@@ -35,7 +36,7 @@ class Menu extends Component {
                 </label>
                 <ul>
                     <li><a href="/posts">文章集</a></li>
-                    <li><a href="/tags">标签册</a></li>
+                    <li><a href="/todo">待做项</a></li>
                     <li><a href="/about">技术栈</a></li>
                 </ul>
             </nav>
@@ -58,16 +59,15 @@ class App extends Component {
                 <Router>
                     <div className="content">
                         <Route exact path="/" component={Home}/>
-                        <Route path="/about" component={About}/>
                         <Route path="/posts" component={Posts}/>
+                        <Route path="/todo" component={Todos}/>
+                        <Route path="/about" component={About}/>
                         <Route path="/tags" component={Tags}/>
                         <Route path="/admin" component={Admin}/>
 
                         <Footer/>
                     </div>
                 </Router>
-
-
 
             </div>
         );

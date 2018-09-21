@@ -1,0 +1,21 @@
+.post {
+    padding: 20px;
+    -webkit-box-shadow: 0 0 5px rgba(202, 203, 203, 0.5);
+    margin-bottom: 53px;
+}
+
+
+.post-title{
+    margin: 20px 0 15px;
+    text-align: left;
+}
+
+.post-meta{
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.post-read-more{
+    margin-top: 20px;
+    text-align: left;
+}
