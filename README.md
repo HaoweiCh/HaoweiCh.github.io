@@ -1,4 +1,11 @@
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+该项目基于 [Create React App](https://github.com/facebookincubator/create-react-app).
+实现 client 端的博客，不带博文CRUD
+
+本地环境展示
+
+```bash
+yarn run start
+```
 
 Below you will find some information on how to perform common tasks.<br>
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
